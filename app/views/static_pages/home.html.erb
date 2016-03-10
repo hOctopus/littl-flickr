@@ -1,0 +1,9 @@
+<%= form_tag root_url, method: :get do %>
+  <%= label_tag "ID: " %>
+  <%= text_field_tag :id %>
+  <%= submit_tag "OK" %>
+<% end %>
+
+<% if @id %>
+  <%= render_flickr_sidebar_widget(@id) %>
+<% end %>
